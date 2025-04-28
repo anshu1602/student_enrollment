@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Enrollment Form</h2>
+    <form id="studentForm">
+        <div class="form-group">
+            <label for="rollNo">Roll No.</label>
+            <input type="text" id="rollNo" name="rollNo" required>
+            <span id="rollNoError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" disabled required>
+            <span id="fullNameError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="class">Class</label>
+            <input type="text" id="class" name="class" disabled required>
+            <span id="classError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="birthDate">Birth Date</label>
+            <input type="date" id="birthDate" name="birthDate" disabled required>
+            <span id="birthDateError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" disabled required>
+            <span id="addressError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="enrollmentDate">Enrollment Date</label>
+            <input type="date" id="enrollmentDate" name="enrollmentDate" disabled required>
+            <span id="enrollmentDateError" class="error"></span>
+        </div>
+        <button type="button" id="saveBtn" disabled>Save</button>
+        <button type="button" id="updateBtn" disabled>Update</button>
+        <button type="button" id="resetBtn" disabled>Reset</button>
+    </form>
+
+    <script src="student_enrollment.js"></script>
+</body>
+</html>
